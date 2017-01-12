@@ -79,3 +79,21 @@
     ]   
 }
 
+{
+    "id": "taurusjob2",
+    "type": "servive",
+    "user": "test",
+    "cluster": "MyCluster",
+    "tasks": [
+        {   
+            "container": {
+                "image": "nginx:1.10"
+            },  
+            "resources": {
+                "cpu": 0.1,
+                "memory": 10  
+            },  
+            "replicas": 4
+        }   
+    ]   
+}
