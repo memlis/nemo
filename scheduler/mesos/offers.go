@@ -47,9 +47,9 @@ func (s *Scheduler) RequestOffers(resources []*mesos.Resource) ([]*mesos.Offer, 
 	return event.Offers.Offers, nil
 }
 
-// DeclineResource is used to send DECLINE request to mesos to release offer. This
+// DeclineOffer is used to send DECLINE request to mesos to release offer. This
 // is very important, otherwise resource will be taked until framework exited.
-func (s *Scheduler) DeclineResource(offerId *string) (*http.Response, error) {
+func (s *Scheduler) DeclineOffer(offerId *string) (*http.Response, error) {
 	call := &sched.Call{
 		FrameworkId: s.framework.GetId(),
 		Type:        sched.Call_DECLINE.Enum(),

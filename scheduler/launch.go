@@ -1,9 +1,9 @@
 package scheduler
 
-type LaunchManager struct {
-	tasks []*Task
-}
+func (s *Scheduler) LaunchJob(job *types.Job, offers []*mesos.Offers) {
+	// split tasks
 
-func NewLaunchManager() *LaunchManager {
-	return &LaunchManager{}
+        // store tasks
+
+       // launch tasks	
 }
