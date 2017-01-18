@@ -27,6 +27,7 @@ type Scheduler struct {
 	apiserver    *api.Server
 	pendingTasks []*task.Task
         pendingJobs  []*job.Job
+        strategy     Strategy
 }
 
 // NewScheduler returns a pointer to new Scheduler
